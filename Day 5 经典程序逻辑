@@ -1,0 +1,31 @@
+#赌博游戏，没有考虑到赌注问题，not_over可以在一开始设为false ,在分支结构最后的else里面写not_over=True 减少代码量
+import random
+control = input('按下任意键开始： ')
+not_over=True
+while len(control) > 0:
+    a = random.randint(1,6)
+    b = random.randint(1,6)
+    print(a,b)
+    if a + b == 7 or a + b== 11:
+        print('You win!')
+        not_over=False
+        break
+    elif a+b==2 or a+b ==3 :
+        print('I win!')
+        not_over=False
+        break
+    elif a+b== 12:
+        print('I win!')
+        nor_over=False
+        break
+    break
+while not_over:
+    c = random.randint(1,6)
+    d = random.randint(1,6)
+    print(c,d)
+    if c+d == 7:
+        print('I win!')
+        break
+    elif c+d == a+b:
+        print('You win!')
+        break
